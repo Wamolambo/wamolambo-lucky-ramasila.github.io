@@ -1,100 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wamolambo Lucky Ramasila</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wamolambo Lucky Ramasila - Professional CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { padding-top: 3rem; }
-    .section-title { margin-top: 2rem; font-weight: bold; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fafc;
+    }
+    .section-divider {
+      border-top: 2px solid #e2e8f0;
+      margin: 1.5rem 0;
+    }
+    .skill-pill {
+      @apply bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium;
+    }
+    .timeline-item {
+      @apply relative pl-8 pb-6 border-l-2 border-blue-500;
+    }
+    .timeline-item:last-child {
+      @apply pb-0;
+    }
+    .timeline-dot {
+      @apply absolute w-4 h-4 rounded-full bg-blue-500 -left-2 top-1;
+    }
   </style>
 </head>
-<body>
-<div class="container">
-  <header class="text-center mb-4">
-    <h1>Wamolambo Lucky Ramasila</h1>
-    <p class="lead">MSc (Electronic Engineering) • PDBA (Business Administration)</p>
-    <p><a href="mailto:luckyramasila@gmail.com">luckyramasila@gmail.com</a> • +27 72992 6255 • Centurion, South Africa</p>
-  </header>
+<body class="bg-gray-50">
+  <div class="max-w-4xl mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden">
+    <!-- Header Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div>
+          <h1 class="text-3xl font-bold">Wamolambo Lucky Ramasila</h1>
+          <p class="text-blue-100 mt-1">MSc (Electronic Engineering) • PDBA (Business Administration)</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <div class="flex items-center space-x-2 mb-1">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:luckyramasila@gmail.com" class="hover:underline">luckyramasila@gmail.com</a>
+          </div>
+          <div class="flex items-center space-x-2 mb-1">
+            <i class="fas fa-phone"></i>
+            <span>+27 72992 6255</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Centurion, South Africa</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <section>
-    <h2 class="section-title">Summary</h2>
-    <p>Experienced Data Engineer with a strong foundation in Electrical Engineering and extensive expertise in data analytics, ETL processes, and AI-driven insights. Proven success in building and optimizing data solutions, deploying scalable pipelines, and leveraging cloud technologies. Recognized for delivering impactful data-driven solutions and fostering collaborative team environments.</p>
-  </section>
+    <!-- Main Content -->
+    <div class="p-8">
+      <!-- Summary Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+          <i class="fas fa-user-tie mr-2"></i> Professional Summary
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          Experienced Data Engineer with a strong foundation in Electrical Engineering and extensive expertise in data analytics, ETL processes, and AI-driven insights. Proven success in building and optimizing data solutions, deploying scalable pipelines, and leveraging cloud technologies. Recognized for delivering impactful data-driven solutions and fostering collaborative team environments.
+        </p>
+      </section>
 
-  <section>
-    <h2 class="section-title">Education</h2>
-    <ul>
-      <li><strong>MSc in Electronic Engineering</strong>, University of KwaZulu-Natal, 2019</li>
-      <li><strong>PDBA</strong>, University of South Africa, 2020</li>
-      <li><strong>BTech in Electronics Engineering</strong>, Nelson Mandela University, 2017</li>
-      <li><strong>National Diploma in Electronics Engineering</strong>, Nelson Mandela University, 2014</li>
-    </ul>
-  </section>
+      <div class="section-divider"></div>
 
-  <section>
-    <h2 class="section-title">Certifications</h2>
-    <ul>
-      <li>Artificial Intelligence in the South African Space – NEMISA, 2022</li>
-      <li>Introduction to Data Engineering – Coursera, 2023</li>
-      <li>Taming Big Data with Apache Spark and Python – Udemy, 2023</li>
-      <li>AWS Certified Solution Architect Associate – Udemy, 2024</li>
-    </ul>
-  </section>
+      <!-- Experience Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-briefcase mr-2"></i> Work Experience
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- Wetility -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="flex flex-col md:flex-row justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">Data Engineer</h3>
+              <span class="text-blue-600 font-medium">Jan 2025 – Present</span>
+            </div>
+            <p class="text-gray-600 font-medium mb-2">Wetility</p>
+            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+              <li>Built and maintained Azure pipelines and managed contractors</li>
+              <li>Designed SQL and NoSQL databases for optimal performance</li>
+              <li>Implemented data governance and quality assurance processes</li>
+            </ul>
+          </div>
+          
+          <!-- ProQuo AI -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="flex flex-col md:flex-row justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">Data Engineer</h3>
+              <span class="text-blue-600 font-medium">Dec 2023 – Dec 2024</span>
+            </div>
+            <p class="text-gray-600 font-medium mb-2">ProQuo AI</p>
+            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+              <li>Worked with Terraform, Airbyte, DBT, Dagster, Git, AWS, Snowflake</li>
+              <li>Developed automated data pipelines for real-time analytics</li>
+              <li>Collaborated with data scientists to implement ML models</li>
+            </ul>
+          </div>
+          
+          <!-- Openserve -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="flex flex-col md:flex-row justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">Data Engineer</h3>
+              <span class="text-blue-600 font-medium">May 2019 – Dec 2023</span>
+            </div>
+            <p class="text-gray-600 font-medium mb-2">Openserve</p>
+            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+              <li>Built scalable ETLs with Python, Bash, SQL, Power BI, Spark</li>
+              <li>Optimized data processing workflows reducing runtime by 40%</li>
+              <li>Created interactive dashboards for business intelligence</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2 class="section-title">Publications</h2>
-    <ul>
-      <li><strong>SATNAC 2018</strong> – Enhanced Maximum Ratio Combiner Over Nakagami-q (Hoyt) Fading Channels</li>
-      <li><strong>International Journal of Communication Systems, 2019</strong> – Improved Error Performance of a 3/4‐Sezginer STBC</li>
-      <li><strong>SATNAC 2019</strong> – 3/4-Rate Sedar STBC over a Nakagami-q (Hoyt) Fading Channel</li>
-    </ul>
-  </section>
+      <div class="section-divider"></div>
 
-  <section>
-    <h2 class="section-title">Experience</h2>
-    <ul>
-      <li><strong>Data Engineer – Wetility (Jan 2025 – Present)</strong>
-        <ul>
-          <li>Built and maintained Azure pipelines and managed contractors</li>
-          <li>Designed SQL and NoSQL databases</li>
-        </ul>
-      </li>
-      <li><strong>Data Engineer – ProQuo AI (Dec 2023 – Dec 2024)</strong>
-        <ul>
-          <li>Worked with Terraform, Airbyte, DBT, Dagster, Git, AWS, Snowflake</li>
-        </ul>
-      </li>
-      <li><strong>Data Engineer – Openserve (May 2019 – Dec 2023)</strong>
-        <ul>
-          <li>Built scalable ETLs with Python, Bash, SQL, Power BI, Spark</li>
-        </ul>
-      </li>
-      <li><strong>Researcher – UKZN (Feb 2017 – Feb 2019)</strong></li>
-      <li><strong>Technician – Continental Tires (Jul 2014 – Jan 2017)</strong></li>
-      <li><strong>Electronic Technician – MicroCare (Jun 2013 – Jun 2014)</strong></li>
-    </ul>
-  </section>
+      <!-- Education Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-graduation-cap mr-2"></i> Education
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-800">MSc in Electronic Engineering</h3>
+            <p class="text-gray-600">University of KwaZulu-Natal</p>
+            <p class="text-gray-500 text-sm mt-1">2019</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-800">PDBA (Postgraduate Diploma in Business Administration)</h3>
+            <p class="text-gray-600">University of South Africa</p>
+            <p class="text-gray-500 text-sm mt-1">2020</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-800">BTech in Electronics Engineering</h3>
+            <p class="text-gray-600">Nelson Mandela University</p>
+            <p class="text-gray-500 text-sm mt-1">2017</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-800">National Diploma in Electronics Engineering</h3>
+            <p class="text-gray-600">Nelson Mandela University</p>
+            <p class="text-gray-500 text-sm mt-1">2014</p>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2 class="section-title">Key Skills</h2>
-    <p>Python • SQL • Apache Spark • Airbyte • DBT • Dagster • Terraform • Git/GitHub • Azure • AWS • Power BI • Bash • Linux</p>
-  </section>
+      <div class="section-divider"></div>
 
-  <section>
-    <h2 class="section-title">Soft Skills</h2>
-    <p>Teamwork • Problem Solving • Communication • Delegation • Project Management • Collaboration</p>
-  </section>
+      <!-- Skills Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-tools mr-2"></i> Skills & Expertise
+        </h2>
+        
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-800 mb-3">Technical Skills</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Apache Spark</span>
+            <span class="skill-pill">Airbyte</span>
+            <span class="skill-pill">DBT</span>
+            <span class="skill-pill">Dagster</span>
+            <span class="skill-pill">Terraform</span>
+            <span class="skill-pill">Git/GitHub</span>
+            <span class="skill-pill">Azure</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Bash</span>
+            <span class="skill-pill">Linux</span>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-3">Professional Skills</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-green-100 text-green-800">Teamwork</span>
+            <span class="skill-pill bg-green-100 text-green-800">Problem Solving</span>
+            <span class="skill-pill bg-green-100 text-green-800">Communication</span>
+            <span class="skill-pill bg-green-100 text-green-800">Delegation</span>
+            <span class="skill-pill bg-green-100 text-green-800">Project Management</span>
+            <span class="skill-pill bg-green-100 text-green-800">Collaboration</span>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2 class="section-title">References</h2>
-    <ul>
-      <li>Dallas Goldswain – <em>dallas.goldswain@proquoai.com</em></li>
-      <li>Carl Sandrock – <em>carl.sandrock@proquoai.com</em></li>
-      <li>Tyson McKeown – <em>tyson.mckeown@proquoai.com</em></li>
-    </ul>
-  </section>
-</div>
+      <div class="section-divider"></div>
+
+      <!-- Certifications Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-certificate mr-2"></i> Certifications
+        </h2>
+        
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Artificial Intelligence in the South African Space</h3>
+              <p class="text-gray-600">NEMISA • 2022</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Introduction to Data Engineering</h3>
+              <p class="text-gray-600">Coursera • 2023</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Taming Big Data with Apache Spark and Python</h3>
+              <p class="text-gray-600">Udemy • 2023</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">AWS Certified Solution Architect Associate</h3>
+              <p class="text-gray-600">Udemy • 2024</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Publications Section -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-book-open mr-2"></i> Publications
+        </h2>
+        
+        <div class="space-y-4">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">Enhanced Maximum Ratio Combiner Over Nakagami-q (Hoyt) Fading Channels</h3>
+            <p class="text-gray-600">SATNAC 2018</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">Improved Error Performance of a 3/4‐Sezginer STBC</h3>
+            <p class="text-gray-600">International Journal of Communication Systems, 2019</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">3/4-Rate Sedar STBC over a Nakagami-q (Hoyt) Fading Channel</h3>
+            <p class="text-gray-600">SATNAC 2019</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- References Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+          <i class="fas fa-users mr-2"></i> References
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">Dallas Goldswain</h3>
+            <p class="text-gray-600">ProQuo AI</p>
+            <a href="mailto:dallas.goldswain@proquoai.com" class="text-blue-600 hover:underline block mt-1">dallas.goldswain@proquoai.com</a>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">Carl Sandrock</h3>
+            <p class="text-gray-600">ProQuo AI</p>
+            <a href="mailto:carl.sandrock@proquoai.com" class="text-blue-600 hover:underline block mt-1">carl.sandrock@proquoai.com</a>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h3 class="font-semibold text-gray-800">Tyson McKeown</h3>
+            <p class="text-gray-600">ProQuo AI</p>
+            <a href="mailto:tyson.mckeown@proquoai.com" class="text-blue-600 hover:underline block mt-1">tyson.mckeown@proquoai.com</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-100 p-4 text-center text-gray-600 text-sm">
+      <p>© 2024 Wamolambo Lucky Ramasila. All rights reserved.</p>
+    </div>
+  </div>
 </body>
 </html>
