@@ -28,29 +28,54 @@
     .timeline-dot {
       @apply absolute w-4 h-4 rounded-full bg-blue-500 -left-2 top-1;
     }
+    .download-btn {
+      @apply bg-white text-blue-700 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-blue-50 transition-all duration-300 flex items-center;
+      border: 2px solid #1d4ed8;
+    }
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .header-content {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .contact-info {
+      @apply bg-blue-700 bg-opacity-20 rounded-lg p-4 mt-4;
+    }
   </style>
 </head>
 <body class="bg-gray-50">
   <div class="max-w-4xl mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden">
     <!-- Header Section -->
     <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div>
-          <h1 class="text-3xl font-bold">Wamolambo Lucky Ramasila</h1>
-          <p class="text-blue-100 mt-1">MSc (Electronic Engineering) • PDBA (Business Administration)</p>
+      <div class="header-content">
+        <div class="flex justify-between items-start">
+          <div>
+            <h1 class="text-3xl font-bold">Wamolambo Lucky Ramasila</h1>
+            <p class="text-blue-100 mt-1">MSc (Electronic Engineering) • PDBA (Business Administration)</p>
+          </div>
+          <!-- Download Button - Moved to right side of name -->
+          <button id="downloadBtn" class="download-btn self-center">
+            <i class="fas fa-download mr-2"></i> Download CV
+          </button>
         </div>
-        <div class="mt-4 md:mt-0">
-          <div class="flex items-center space-x-2 mb-1">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:luckyramasila@gmail.com" class="hover:underline">luckyramasila@gmail.com</a>
-          </div>
-          <div class="flex items-center space-x-2 mb-1">
-            <i class="fas fa-phone"></i>
-            <span>+27 72992 6255</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Centurion, South Africa</span>
+        
+        <!-- Contact Info - Moved below name and button -->
+        <div class="contact-info">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:luckyramasila@gmail.com" class="hover:underline">luckyramasila@gmail.com</a>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-phone"></i>
+              <span>+27 72992 6255</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Centurion, South Africa</span>
+            </div>
           </div>
         </div>
       </div>
@@ -305,17 +330,82 @@
         </div>
       </section>
     </div>
-    <!-- Download Button -->
-    <div class="flex justify-center mt-6">
-      <a href="Wamolambo_Ramasila_Resume.docx.pdf" download
-         class="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">
-        <i class="fas fa-download mr-2"></i> Download CV (PDF)
-      </a>
-    </div>
+
     <!-- Footer -->
     <div class="bg-gray-100 p-4 text-center text-gray-600 text-sm">
       <p>© 2024 Wamolambo Lucky Ramasila. All rights reserved.</p>
     </div>
   </div>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Create CSV content
+      const csvContent = [
+        ['Name,Position,Email,Phone,Location'],
+        ['Wamolambo Lucky Ramasila,MSc (Electronic Engineering) • PDBA (Business Administration),luckyramasila@gmail.com,+27 72992 6255,Centurion, South Africa'],
+        [''],
+        ['Professional Summary'],
+        ['Experienced Data Engineer with a strong foundation in Electrical Engineering and extensive expertise in data analytics, ETL processes, and AI-driven insights. Proven success in building and optimizing data solutions, deploying scalable pipelines, and leveraging cloud technologies. Recognized for delivering impactful data-driven solutions and fostering collaborative team environments.'],
+        [''],
+        ['Work Experience'],
+        ['Data Engineer,Jan 2025 – Present,Wetility'],
+        ['- Built and maintained Azure pipelines and managed contractors'],
+        ['- Designed SQL and NoSQL databases for optimal performance'],
+        ['- Implemented data governance and quality assurance processes'],
+        [''],
+        ['Data Engineer,Dec 2023 – Dec 2024,ProQuo AI'],
+        ['- Worked with Terraform, Airbyte, DBT, Dagster, Git, AWS, Snowflake'],
+        ['- Developed automated data pipelines for real-time analytics'],
+        ['- Collaborated with data scientists to implement ML models'],
+        [''],
+        ['Data Engineer,May 2019 – Dec 2023,Openserve'],
+        ['- Built scalable ETLs with Python, Bash, SQL, Power BI, Spark'],
+        ['- Optimized data processing workflows reducing runtime by 40%'],
+        ['- Created interactive dashboards for business intelligence'],
+        [''],
+        ['Education'],
+        ['MSc in Electronic Engineering,2019,University of KwaZulu-Natal'],
+        ['PDBA (Postgraduate Diploma in Business Administration),2020,University of South Africa'],
+        ['BTech in Electronics Engineering,2017,Nelson Mandela University'],
+        ['National Diploma in Electronics Engineering,2014,Nelson Mandela University'],
+        [''],
+        ['Skills'],
+        ['Technical Skills: Python, SQL, Apache Spark, Airbyte, DBT, Dagster, Terraform, Git/GitHub, Azure, AWS, Power BI, Bash, Linux'],
+        ['Professional Skills: Teamwork, Problem Solving, Communication, Delegation, Project Management, Collaboration'],
+        [''],
+        ['Certifications'],
+        ['Artificial Intelligence in the South African Space,2022,NEMISA'],
+        ['Introduction to Data Engineering,2023,Coursera'],
+        ['Taming Big Data with Apache Spark and Python,2023,Udemy'],
+        ['AWS Certified Solution Architect Associate,2024,Udemy'],
+        [''],
+        ['Publications'],
+        ['Enhanced Maximum Ratio Combiner Over Nakagami-q (Hoyt) Fading Channels,SATNAC 2018'],
+        ['Improved Error Performance of a 3/4‐Sezginer STBC,International Journal of Communication Systems, 2019'],
+        ['3/4-Rate Sedar STBC over a Nakagami-q (Hoyt) Fading Channel,SATNAC 2019'],
+        [''],
+        ['References'],
+        ['Dallas Goldswain,ProQuo AI,dallas.goldswain@proquoai.com'],
+        ['Carl Sandrock,ProQuo AI,carl.sandrock@proquoai.com'],
+        ['Tyson McKeown,ProQuo AI,tyson.mckeown@proquoai.com']
+      ].join('\n');
+
+      // Create download link
+      const encodedUri = encodeURI('data:text/csv;charset=utf-8,' + csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', 'Wamolambo_Lucky_Ramasila_CV.csv');
+      document.body.appendChild(link);
+      
+      // Trigger download
+      link.click();
+      
+      // Clean up
+      document.body.removeChild(link);
+      
+      // Show success message
+      alert('CV downloaded as CSV successfully!');
+    });
+  </script>
 </body>
 </html>
